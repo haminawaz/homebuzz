@@ -75,13 +75,10 @@ const HeroSlider = () => {
           >
             <div className="max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 min-lg:px-12 h-full">
               <div className="flex flex-col min-lg:grid min-lg:grid-cols-2 gap-4 xs:gap-6 min-lg:gap-8 items-center justify-center h-full">
-                <div className="w-full min-lg:order-2 text-center min-lg:text-left space-y-3 xs:space-y-4 sm:space-y-6 py-4 xs:py-6 sm:py-8 min-lg:py-12 relative">
+                <div className="w-4/6 min-lg:order-2 text-center min-lg:text-left space-y-3 xs:space-y-4 sm:space-y-6 py-4 xs:py-6 sm:py-8 min-lg:py-12 relative">
                   <div>
-                    <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl min-lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
-                      {slide.title.split(" ")[0]}
-                    </h1>
-                    <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl min-lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
-                      {slide.title.split(" ")[1] || ""}
+                    <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl min-lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight break-words">
+                      {slide.title}
                     </h1>
                   </div>
                   <p className="text-base xs:text-lg sm:text-xl md:text-xl text-[#FFCE3A] font-semibold">

@@ -10,40 +10,35 @@ const TutorialSection = (): JSX.Element => {
       className: "col-span-2 row-span-3",
       stats: { products: "6", readTime: "2" },
       image: "/tutorial/one.png",
-      gradientColor: "from-[#FFD600]",
-      gradientDirection: "to-t",
+      gradient: "bg-gradient-to-t from-[#FFD600] to-transparent",
     },
     {
       id: 2,
       title: "DIY furniture renovation",
       className: "col-span-1 row-span-6",
       image: "/tutorial/two.png",
-      gradientColor: "from-[#F1DB8D]",
-      gradientDirection: "to-t",
+      gradient: "bg-gradient-to-t from-[#F1DB8D] to-transparent",
     },
     {
       id: 3,
       title: "Gardening tips & tricks",
       className: "col-span-1 row-span-6",
       image: "/tutorial/three.png",
-      gradientColor: "from-[#78FF00]",
-      gradientDirection: "to-t",
+      gradient: "bg-gradient-to-t from-[#78FF00] to-transparent",
     },
     {
       id: 4,
       title: "Make Your Own DIY Lamp",
       className: "col-span-1 row-span-6",
       image: "/tutorial/four.png",
-      gradientColor: "from-[#E5DCCA]",
-      gradientDirection: "to-t",
+      gradient: "bg-gradient-to-t from-[#E5DCCA] to-transparent",
     },
     {
       id: 5,
       title: "21 Organize ideas for home",
       className: "col-span-1 row-span-6",
       image: "/tutorial/five.png",
-      gradientColor: "from-[#E5DCCA]",
-      gradientDirection: "to-t",
+      gradient: "bg-gradient-to-t from-[#E5DCCA] to-transparent",
     },
     {
       id: 6,
@@ -51,8 +46,7 @@ const TutorialSection = (): JSX.Element => {
       className: "col-span-2 row-span-3",
       stats: { products: "6", readTime: "2" },
       image: "/tutorial/six.png",
-      gradientColor: "from-[#FF3D00]",
-      gradientDirection: "to-t",
+      gradient: "bg-gradient-to-t from-[#FF3D00] to-transparent",
       dataDirection: "justify-start",
     },
     {
@@ -62,8 +56,7 @@ const TutorialSection = (): JSX.Element => {
       stats: { products: "6", readTime: "2" },
       textColor: "text-white",
       image: "/tutorial/seven.png",
-      gradientColor: "from-[#0051FF]",
-      gradientDirection: "to-r",
+      gradient: "bg-gradient-to-r from-[#0051FF] to-transparent",
       dataDirection: "justify-start",
       statsDirection: "flex-col item-start",
     },
@@ -73,8 +66,7 @@ const TutorialSection = (): JSX.Element => {
       className: "col-span-2 row-span-1",
       stats: { products: "6", readTime: "2" },
       image: "/tutorial/eight.png",
-      gradientColor: "from-[#EB9DFF]",
-      gradientDirection: "to-r",
+      gradient: "bg-gradient-to-r from-[#EB9DFF] to-transparent",
       dataDirection: "justify-start",
       statsDirection: "flex-col item-start",
     },
@@ -103,11 +95,11 @@ const TutorialSection = (): JSX.Element => {
                   style={{ backgroundImage: `url(${card.image})` }}
                 >
                   <div
-                    className={`absolute inset-0 bg-gradient-${card.gradientDirection} ${card.gradientColor} to-transparent`}
+                    className={`absolute inset-0 ${card.gradient}`}
                   />
 
                   <div
-                    className={`relative z-10 p-6 flex flex-col md:flex-row ${
+                    className={`relative z-10 p-2 md:p-6 flex flex-col md:flex-row ${
                       card.statsDirection ? card.statsDirection : "md:items-center"
                     } justify-between ${
                       card.textColor ? card.textColor : "text-black"
