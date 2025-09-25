@@ -135,7 +135,7 @@ export default function PopularProducts() {
   return (
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-10 ps-12">
+        <h2 className="text-3xl md:text-6xl font-black text-gray-900 mb-10 ps-12">
           Popular Products
         </h2>
 
