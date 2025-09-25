@@ -81,7 +81,7 @@ const TutorialSection = (): JSX.Element => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-4 gap-3 md:gap-6 mb-12">
           {tutorialCards.map((card) => (
             <Card
               key={card.id}
@@ -105,7 +105,7 @@ const TutorialSection = (): JSX.Element => {
                       card.textColor ? card.textColor : "text-black"
                     }`}
                   >
-                    <h3 className="text-base sm:text-md md:text-2xl lg:text-3xl font-black mb-2 md:mb-4">
+                    <h3 className="text-[13px] sm:text-base sm:text-md md:text-2xl lg:text-3xl font-black mb-2 md:mb-4">
                       {card.title}
                     </h3>
                     <div
