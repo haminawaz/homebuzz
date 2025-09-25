@@ -53,7 +53,7 @@ const TutorialSection = (): JSX.Element => {
       image: "/tutorial/six.png",
       gradientColor: "from-[#FF3D00]",
       gradientDirection: "to-t",
-      dataDirection: "justify-start"
+      dataDirection: "justify-start",
     },
     {
       id: 7,
@@ -84,7 +84,7 @@ const TutorialSection = (): JSX.Element => {
     <section className="py-16 bg-[#f5f7f8]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-6xl font-black text-gray-900 mb-10">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 md:mb-10">
             Inspire Yourself with Tutorials
           </h2>
         </div>
@@ -97,21 +97,27 @@ const TutorialSection = (): JSX.Element => {
             >
               <CardContent className="p-0 h-full">
                 <div
-                  className={`relative h-full min-h-[200px] flex flex-col ${card.dataDirection ? card.dataDirection : "justify-end"} bg-cover bg-center`}
+                  className={`relative h-full min-h-[200px] flex flex-col ${
+                    card.dataDirection ? card.dataDirection : "justify-end"
+                  } bg-cover bg-center`}
                   style={{ backgroundImage: `url(${card.image})` }}
                 >
                   <div
                     className={`absolute inset-0 bg-gradient-${card.gradientDirection} ${card.gradientColor} to-transparent`}
                   />
 
-                  <div className={`relative z-10 p-6 flex ${card.statsDirection ? card.statsDirection : "items-center"} justify-between ${
-                    card.textColor ? card.textColor : "text-black"
-                  }`}>
-                    <h3 className="text-3xl font-black mb-4">
+                  <div
+                    className={`relative z-10 p-6 flex flex-col md:flex-row ${
+                      card.statsDirection ? card.statsDirection : "md:items-center"
+                    } justify-between ${
+                      card.textColor ? card.textColor : "text-black"
+                    }`}
+                  >
+                    <h3 className="text-base sm:text-md md:text-2xl lg:text-3xl font-black mb-2 md:mb-4">
                       {card.title}
                     </h3>
                     <div
-                      className={`text-sm ${
+                      className={`text-[10px] md:text-[10px] xl:text-sm ${
                         card.textColor ? card.textColor : "text-black"
                       }`}
                     >

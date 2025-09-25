@@ -18,7 +18,7 @@ interface Props {
 
 const StarSvg = ({ filled }: { filled: boolean }) => (
   <svg
-    className="h-4 w-4"
+    className="h-3 w-3 sm:h-4 sm:w-4"
     viewBox="0 0 20 20"
     fill={filled ? "currentColor" : "none"}
     stroke="currentColor"
@@ -42,16 +42,17 @@ export default function ProductCard({
   const [added, setAdded] = useState(false);
 
   const fullStars = Math.floor(rating);
+  
   return (
     <div
       onClick={onSelect}
       className={`bg-white rounded-none border-none duration-200 cursor-pointer flex ${
         isWide ? "flex-row-reverse" : "flex-col"
-      } h-80 items-stretch`}
+      } h-64 sm:h-72 md:h-80 items-stretch`}
     >
       <div
-        className={`flex items-center justify-center ${
-          isWide ? "h-full w-2/3 pb-4" : "h-1/2 w-full"
+        className={`flex items-center justify-center p-2 sm:p-3 md:p-4 ${
+          isWide ? "h-full w-1/2 lg:w-2/3 md:pb-4" : "h-1/2 w-full"
         }`}
       >
         <Image
@@ -65,14 +66,18 @@ export default function ProductCard({
       </div>
 
       <div
-        className={`p-4 space-y-2 flex-1 flex flex-col ${
-          isWide ? "w-1/3 justify-end" : "w-full"
+        className={`p-2 sm:p-3 md:p-4 space-y-1 sm:space-y-2 flex-1 flex flex-col ${
+          isWide ? "w-1/2 lg:w-1/3 justify-end" : "w-full"
         }`}
       >
-        {isWide && <h3 className="text-2xl text-gray-900">{name}</h3>}
+        {isWide && (
+          <h3 className="text-center lg:text-start text-lg sm:text-xl md:text-2xl text-gray-900 line-clamp-2 block">
+            {name}
+          </h3>
+        )}
 
-        <div className="flex items-center justify-center gap-2">
-          <div className="flex items-center gap-[2px] text-yellow-400">
+        <div className="flex items-center justify-center gap-1 sm:gap-2">
+          <div className="flex items-center gap-[1px] sm:gap-[2px] text-yellow-400">
             {Array.from({ length: 5 }).map((_, i) => (
               <span
                 key={i}
@@ -84,39 +89,41 @@ export default function ProductCard({
           </div>
         </div>
 
-        {!isWide && (
-          <h3 className="text-sm text-center text-gray-900 line-clamp-2 my-4">
+        {(!isWide) && (
+          <h3 className="text-xs sm:text-[13px] text-center text-gray-900 line-clamp-2 my-1 sm:my-2 md:my-4">
             {name}
           </h3>
         )}
 
         <div className="flex items-end justify-between mt-auto w-full">
-          <div className="flex  items-center justify-center w-full">
-            <div className="flex items-baseline gap-2">
+          <div className="flex items-center justify-center w-full gap-1">
+            <div className="flex items-baseline gap-1 sm:gap-2">
               <span
                 className={`${
-                  isWide ? "text-3xl" : "text-lg"
+                  isWide ? "text-xl sm:text-2xl md:text-3xl" : "text-sm sm:text-base md:text-lg"
                 } font-black text-gray-900`}
               >
                 ${price.toFixed(2)}
               </span>
             </div>
-            <div className={`${isWide ? "text-sm" : "text-xs"} text-gray-500`}>
+            <div className={`${
+              isWide ? "text-xs sm:text-sm" : "text-xs"
+            } text-gray-500`}>
               / {unit}
             </div>
           </div>
         </div>
 
-        <div className="mt-2">
+        <div className="mt-1 sm:mt-2">
           {!cart ? (
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 setAdded(true);
               }}
-              className="w-full px-3 py-2 rounded-none text-sm font-semibold bg-[#FFCE3A] hover:bg-[#E6B833] text-black transition"
+              className="w-full px-2 py-1.5 sm:px-3 sm:py-2 rounded-none text-xs sm:text-sm font-semibold bg-[#FFCE3A] hover:bg-[#E6B833] text-black transition"
             >
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center justify-center gap-1 sm:gap-2">
                 Add to Cart
               </div>
             </button>
@@ -126,11 +133,11 @@ export default function ProductCard({
                 e.stopPropagation();
                 setAdded(false);
               }}
-              className="w-full px-3 py-2 rounded-none text-sm font-semibold bg-black text-white transition"
+              className="w-full px-2 py-1.5 sm:px-3 sm:py-2 rounded-none text-xs sm:text-sm font-semibold bg-black text-white transition"
             >
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center justify-center gap-1 sm:gap-2">
                 Added
-                <CircleCheck className="h-4 w-4" />
+                <CircleCheck className="h-3 w-3 sm:h-4 sm:w-4" />
               </div>
             </button>
           )}

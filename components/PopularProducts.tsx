@@ -139,13 +139,13 @@ export default function PopularProducts() {
           Popular Products
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-min">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-auto">
           {products.map((p, idx) => {
             const isWide = (idx - 2) % 7 === 0;
             return (
               <div
                 key={p.id}
-                className={`${isWide ? "md:col-span-2 lg:col-span-2" : ""}`}
+                className={`${isWide ? "col-span-2" : ""}`}
               >
                 <ProductCard {...p} isWide={isWide} />
               </div>

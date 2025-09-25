@@ -43,7 +43,7 @@ const Header = () => {
     <>
       <header className="bg-[#353B3E] text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between py-4 px-12">
+          <div className="flex items-center justify-between py-4 px-4 sm:px-8 md:px-10 min-lg:px-12">
             <div className="flex items-center">
               <Image
                 src="/logo.svg"
@@ -207,7 +207,7 @@ const Header = () => {
       </header>
 
       <div className="border-b border-gray-200 px-4">
-        <div className="max-w-7xl mx-auto px-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10 min-lg:px-12">
           <div className="flex items-center justify-center py-3">
             <nav className="hidden lg:flex items-center space-x-3 flex-1">
               {categoryNavItems.map((category) => (
