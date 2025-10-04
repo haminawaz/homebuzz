@@ -40,6 +40,13 @@ const slides = [
     image: "/slider/one.png",
     buttonText: "Browse in Store",
   },
+  {
+    id: 6,
+    title: "Furniture Week",
+    subtitle: "Up to 50% off select furniture",
+    image: "/slider/one.png",
+    buttonText: "Browse in Store",
+  },
 ];
 
 const HeroSlider = () => {
@@ -110,12 +117,12 @@ const HeroSlider = () => {
           </div>
         ))}
 
-        <div className="absolute right-4 xl:right-44 top-1/2 -translate-y-1/2 flex flex-col space-y-3">
+        <div className="absolute right-4 xl:right-44 top-1/2 -translate-y-1/2 flex flex-col space-y-5">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 xs:w-4 xs:h-4 rounded-full transition-all duration-300 ${
+              className={`w-[10px] h-[10px] rounded-full transition-all duration-300 ${
                 index === currentSlide
                   ? "bg-yellow-500 scale-125 shadow-lg"
                   : "bg-white bg-opacity-60 hover:bg-opacity-80"
