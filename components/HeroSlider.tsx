@@ -9,35 +9,35 @@ const slides = [
     id: 1,
     title: "Furniture Week",
     subtitle: "Up to 50% off select furniture",
-    image: "/slider/one.svg",
+    image: "/slider/one.png",
     buttonText: "Browse in Store",
   },
   {
     id: 2,
     title: "Furniture Week",
     subtitle: "Up to 50% off select furniture",
-    image: "/slider/one.svg",
+    image: "/slider/one.png",
     buttonText: "Browse in Store",
   },
   {
     id: 3,
     title: "Furniture Week",
     subtitle: "Up to 50% off select furniture",
-    image: "/slider/one.svg",
+    image: "/slider/one.png",
     buttonText: "Browse in Store",
   },
   {
     id: 4,
     title: "Furniture Week",
     subtitle: "Up to 50% off select furniture",
-    image: "/slider/one.svg",
+    image: "/slider/one.png",
     buttonText: "Browse in Store",
   },
   {
     id: 5,
     title: "Furniture Week",
     subtitle: "Up to 50% off select furniture",
-    image: "/slider/one.svg",
+    image: "/slider/one.png",
     buttonText: "Browse in Store",
   },
 ];
@@ -102,7 +102,7 @@ const HeroSlider = () => {
                       height={1200}
                       priority
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-10 rounded-lg"></div>
+                    <div className="absolute inset-0 rounded-lg"></div>
                   </div>
                 </div>
               </div>
